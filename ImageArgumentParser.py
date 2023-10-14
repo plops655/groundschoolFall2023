@@ -1,7 +1,10 @@
 import argparse
+from KMeansSegmentation import KDominantColors
 
 def main(arguments):
     print("Starting main() function")
+    parse_dominant = KDominantColors()
+    print(parse_dominant.dominantColors(arguments.img_path))
 
 # This if statement will take a path to an image if you attach the flag -ip before the call.
 # It will then run the main function passing in the arguments as a list, so to access the image path, you must call arguments[0]
